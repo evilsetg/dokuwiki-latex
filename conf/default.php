@@ -14,7 +14,7 @@ $conf['xsize_limit'] = 1000;
 $conf['ysize_limit'] = 500;
 $conf['string_length_limit'] = 2000;
 
-$conf['preamble'] = '\\documentclass[10pt]{article}
+$conf['preamble'] = '\\documentclass[10pt]{standalone}
 \\usepackage[utf8]{inputenc}
 \\usepackage{amsmath}
 \\usepackage{amsfonts}
