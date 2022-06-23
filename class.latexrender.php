@@ -245,9 +245,12 @@ class LatexRender {
 	   $this->myexec($command,$status_dvips);
 
 
-	   // imagemagick convert ps to image and trim picture
-	   $command = $this->_convert_path." ".$this->_tmp_filename.".ps ".
-				$this->_tmp_filename.".".$this->_image_format;
+	   // ghostscript convert ps to image
+	   $command = $this->_ghostscript_path." -o ".$this->_tmp_filename.".png ".$this->_tmp_filename.".ps";
+	   $this->myexec($command,$status_convert);
+
+	   // convert trim image
+	   $command = $this->_convert_path." ".$this->_tmp_filename.".png ".$this->_tmp_filename.".png";
 	   $this->myexec($command,$status_convert);
 
 		 

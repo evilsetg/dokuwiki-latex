@@ -49,6 +49,8 @@ abstract class syntax_plugin_latex_common extends DokuWiki_Syntax_Plugin {
 		$latex->_dvips_path = $this->getConf("dvips_path");
 		$latex->_convert_path = $this->getConf("convert_path").' '.$this->getConf("convert_options");
 		$latex->_identify_path = $this->getConf("identify_path");
+		$latex->_ghostscript_path = $this->getConf("ghostscript_path").' '.$this->getConf("ghostscript_options");
+		$latex->_identify_path = $this->getConf("identify_path");
 		$latex->_keep_tmp = false;
 		$latex->_image_format = $this->getConf("image_format");
 		$latex->_colour = $this->getConf("colour");
