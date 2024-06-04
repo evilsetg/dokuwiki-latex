@@ -36,7 +36,7 @@ abstract class syntax_plugin_latex_common extends DokuWiki_Syntax_Plugin {
 	}
 		
 	/* common constructor -- get config settings */
-	function syntax_plugin_latex_common()
+	function __construct()
 	{
 		global $conf;
 		$meddir = $conf['mediadir'] . '/' . strtr($this->getConf('latex_namespace'),':','/');
